@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni | Ingénieur Logiciel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Palette basée sur l'image Tomato fournie */
+        :root {
+            /* Mode Clair (par défaut) */
+            --bg: #fff5f2;
+            --text: #2d1410;
+            --text-secondary: #63423b;
+            --accent: #f05a3e; /* Rouge Tomate vif */
+            --border: #ffd9d2;
+            --card-bg: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Mode Sombre */
+                --bg: #120d0b; /* Le ton le plus sombre de l'image */
+                --text: #fdd0c7;
+                --text-secondary: #a88e89;
+                --accent: #f05a3e;
+                --border: #3b1a15;
+                --card-bg: #1a1412;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        header { margin-bottom: 80px; }
+
+        h1 { font-size: 2.5rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.02em; }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        section { margin-bottom: 64px; }
+
+        h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .project {
+            margin-bottom: 40px;
+            padding: 24px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .tags { display: flex; gap: 12px; font-size: 0.75rem; font-weight: 600; opacity: 0.8; }
+        
+        .tag { color: var(--accent); }
+
+        a { color: inherit; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent); }
+
+        .links { margin-top: 32px; display: flex; gap: 24px; font-size: 0.9rem; }
+
+        footer {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Giovanni HONAKOKO.</h1>
+            <p class="subtitle">Engineering Student in Applied Mathematics</p>
+            <div class="links">
+                <a href="https://github.com/giovannihnk" target="_blank">GitHub ↗</a>
+                <a href="mailto:honakokogiovanni@outlook.com">Email ↗</a>
+                <a href="#www.linkedin.com/in/giovanni-honakoko-085465341">LinkedIn ↗</a>
+            </div>
+        </header>
+
+        <section id="projects">
+            <h2>Projets Sélectionnés</h2>
+
+            <div class="project">
+                <div class="project-title">
+                    <span>Plex-Auto-Delete</span>
+                    <a href="https://github.com/giovannihnk/Plex-Auto-Delete" target="_blank">↗</a>
+                </div>
+                <p class="project-desc">Script d'automatisation intelligent pour la gestion de l'espace disque d'un serveur Plex. Supprime automatiquement les médias visionnés selon des critères personnalisables.</p>
+                <div class="tags">
+                    <span class="tag">PYTHON</span>
+                    <span class="tag">PLEX API</span>
+                    <span class="tag">AUTOMATION</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    <span>Discord-Leagues-Bot</span>
+                    <a href="https://github.com/giovannihnk/Discord-Leagues-Bot" target="_blank">↗</a>
+                </div>
+                <p class="project-desc">Solution de gestion de ligues compétitives sur Discord. Inclut un système de classement (ELO) et une gestion automatisée des matchs.</p>
+                <div class="tags">
+                    <span class="tag">JAVASCRIPT</span>
+                    <span class="tag">NODE.JS</span>
+                    <span class="tag">DATABASE</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    <span>VLC-Discord-RPC</span>
+                    <a href="https://github.com/giovannihnk/VLC-Discord-RPC" target="_blank">↗</a>
+                </div>
+                <p class="project-desc">Application permettant d'afficher votre activité de lecture VLC en temps réel sur votre profil Discord via le Rich Presence.</p>
+                <div class="tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">DOTNET</span>
+                    <span class="tag">DISCORD API</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Compétences Techniques</h2>
+            <div class="project-desc">
+                <strong>Langages:</strong> Python, JavaScript, C#, Java, SQL.<br>
+                <strong>Technologies:</strong> Docker, Git, CI/CD, Linux, API Integration.
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 — Construit avec passion et minimalisme.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
